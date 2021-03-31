@@ -1,0 +1,360 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/pexels-fotografierende-1172105.jpg);
+    background-repeat: no-repeat;
+    background-position: -4px -57px; 
+    background-size: 1720px;
+    animation: moveIt 30s linear infinite;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Moving background */
+@keyframes moveIt {
+    0% {background-position: -34px -57px;}
+    60% {background-position: 0px 0px;}
+    100% {background-position: -44px -57px;}
+  }
+
+#box {
+    height: 422px;
+    width: 924px;
+    background: rgba(59, 59, 59, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main {
+    position: absolute;
+    height: 464px;
+    width: 464px;
+    background: #ffffff;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    -webkit-transition: 700ms;
+    -moz-transition: 700ms;
+    -ms-transition: 700ms;
+    -o-transition: 700ms;
+    transition: 700ms;
+}
+
+.loginform {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+
+    -webkit-transition: 700ms;
+    -moz-transition: 700ms;
+    -ms-transition: 700ms;
+    -o-transition: 700ms;
+    transition: 700ms;
+}
+
+.signupform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+
+    -webkit-transition: 700ms;
+    -moz-transition: 700ms;
+    -ms-transition: 700ms;
+    -o-transition: 700ms;
+    transition: 700ms;
+}
+
+/* Triggers when login-btn clicked */
+.moveLeft {
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+/* Triggers when login-btn clicked */
+.fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0ms linear 500ms, opacity 0ms;
+}
+.fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 500ms linear 50ms, opacity 500ms;
+}
+
+
+.head {
+    display: flex;
+    width: 282px;
+}
+
+.logo {
+    position: absolute;
+    width: 60px;
+    right: 0;
+    top: 20px;
+}
+
+.loginform h1, .signupform h1{
+    font-size: 25px;
+    color: rgb(62, 73, 94);
+}
+
+.login-forgot-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-forgot-button a {
+    position: absolute;
+    color: rgb(62, 73, 94);
+    right: 0px;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.loginform input, .signupform input {
+    height: 25px;
+    width: 284px;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid rgb(203, 210, 223);
+    margin-top: 10px;
+    background: none;
+}
+label {
+    color: rgb(129, 134, 145);
+    width: 284px;
+    position: absolute;
+    margin-top: 19px;
+    font-size: 12px;
+    font-weight: bolder;
+    display: flex;
+}
+
+label i {
+    position: absolute;
+    right: 0;
+}
+label #must {
+    color: red;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.loginform button, .signupform button {
+    height: 53px;
+    width: 144px;
+    background-color: rgb(248, 154, 53);
+    border: none;
+    outline: none;
+    border-radius: 27px;
+    margin-top: 30px;
+    color: white;
+}
+.loginBtn, .signupBtn{
+    height: 53px;
+    width: 144px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid  rgb(73, 171, 254);
+    border-radius: 27px;
+    outline: none;
+    position: absolute;
+    transition: all 0.5s;
+}
+.loginBtn {
+    top: 67%;
+    left: 71%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.signupBtn {
+    top: 77%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.loginBtn:hover, .signupBtn:hover {
+    background-color: rgb(73, 171, 254);
+    color: #fff;
+    cursor: pointer;
+}
+
+#loginmsg, #signupmsg {
+    font-size: 25px;
+    font-weight: normal;
+    color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    width:275px;
+    height: 194px;
+    letter-spacing: 2px;
+}
+
+#loginmsg {
+    top: 35%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+}
+
+#signupmsg {    
+    left: 25%;
+    top: 32%;
+    transform: translate(-50%, -50%);
+}
+#signupmsg p {    
+    margin-top: 30px;
+}
+#black {
+    display: block;
+    width: 43px;
+    border-bottom: solid 5px rgb(0, 0, 0);
+    margin: 10px 0px;
+}
+#white {
+    display: block;
+    width: 43px;
+    border-bottom: solid 5px rgb(255, 255, 255);
+    margin: 10px 0px;
+}
+
+#loginmsg p, #signupmsg p {
+    font-size: 14px;
+    margin-right: 15px;
+    line-height: 25px;
+    letter-spacing: 0px;
+}
+#loginmsg p {
+    margin-top: 30px;
+}
+
+footer {
+    width: 400px;
+    height: 20px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 800px) {
+
+    body {
+        height: 100%;
+        width: 100%;
+        background-image: none !important;
+    }
+
+    #box {
+        height: 100%;
+    }
+
+    .main {
+        width: 100%;
+        max-width: 750px;
+        height: 100% !important;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    .loginform {
+        top: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    .signupform {
+        top: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    .login-forgot-button {
+        display: block;
+        position: relative;
+    }
+
+    .login-forgot-button .login {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 40px;
+    }
+
+    .login-forgot-button a {
+        position: absolute;
+        display: block;
+        right: 112px;
+        margin-top: 75px;
+    }
+    .signup-button {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    #loginmsg span, p, #signupmsg span, p {
+        display: none !important;
+    }
+    #signupmsg h5 {
+        color: rgb(107, 100, 100);
+        display: block;
+        position: relative;
+        top: 205%;
+        left: 100%;
+        font-size: 16px;
+    }
+    #loginmsg h5 {
+        color: rgb(107, 100, 100);
+        display: none;
+    }
+
+    .signupBtn {
+        position: absolute;
+        display: block;
+        top: 69%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: rgb(107, 100, 100);
+
+        -webkit-transition: 1000ms;
+        -moz-transition: 1000ms;
+        -ms-transition: 1000ms;
+        -o-transition: 1000ms;
+        transition: 1000ms; 
+    }
+
+    .loginBtn {
+        position: absolute;
+        display: none;
+        top: 69%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: rgb(107, 100, 100);
+
+        -webkit-transition: 1000ms;
+        -moz-transition: 1000ms;
+        -ms-transition: 1000ms;
+        -o-transition: 1000ms;
+        transition: 1000ms; 
+    }
+
+}
